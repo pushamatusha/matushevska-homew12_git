@@ -1,0 +1,3 @@
+award name: Georges Award
+award type: Nominee
+award: Best Foreign Drama of the Year

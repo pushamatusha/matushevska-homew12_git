@@ -1,0 +1,2 @@
+award name: Amanda
+award type: Nominee
