@@ -1,0 +1,3 @@
+award name: Teen Choice Award
+award type: Nominee
+award: Film - Choice Movie, Drama/Action Adventure

@@ -5,13 +5,10 @@ from awards import films_awards
 # крок 1
 os.mkdir("Harry Potter")
 
-
 for film in films_titles["results"]:
     film_title = film["title"].replace(":", "")
     film_dir = os.path.join("Harry Potter", film_title)
     os.mkdir(film_dir) # Папки з назв фільмів
-
-
 # крок 2
 for film in films_titles["results"]:
     film_title = film["title"].replace(":", "")
@@ -20,8 +17,6 @@ for film in films_titles["results"]:
     for letter in string.ascii_uppercase:
         letter_dir = os.path.join(film_dir, letter)
         os.mkdir(letter_dir)
-
-
 # крок 3 (тут в мене була помилка, в списку був тільки 1 фільм зі всіма нагородами, у колабі перевірила)
 film_awards_list = []
 
@@ -45,7 +40,6 @@ for films in films_awards:
     for award_info in sorted_film_awards:
         award_name = award_info['award_name']
         award_letter = award_name[0].upper()
-
 # а ось тут добавила цю точку касання, чому в мене всі файли додавались до всіх папок з літерами одразу
         for film in films_titles["results"]:
             if award_info['title'] == film['title']: # їх потрібно було порівняти за назвою
@@ -54,7 +48,7 @@ for films in films_awards:
 
                 if os.path.exists(film_dir):
                     file_path = os.path.join(film_dir, f"{award_name}.txt")
-                    with open(file_path, 'w') as award_file:
+                    with open(file_path, 'w', encoding ="utf-8") as award_file:
                         award_file.write(f"award name: {award_info['award_name']}\n")
                         award_file.write(f"award type: {award_info['type']}\n")
                         award_file.write(f"award: {award_info['award']}\n")

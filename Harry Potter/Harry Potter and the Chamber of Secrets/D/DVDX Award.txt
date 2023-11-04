@@ -1,0 +1,3 @@
+award name: DVDX Award
+award type: Nominee
+award: Best Overall DVD, New Movie (Including All Extra Features)
